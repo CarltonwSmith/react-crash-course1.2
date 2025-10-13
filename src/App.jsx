@@ -1,21 +1,18 @@
 
 import './App.css';
-
+import Todo from './Components/Todo';
 function App() {
   return (
     <div >
       <h1>My to do list</h1>
       <div>
-        <h2>Finish fronted simplified</h2>
-        <button>Delete</button>
-        </div>
-      <div>
-        <h2>Finish interview section</h2>
-        <button>Delete</button>
+        <Todo title="Finish fronted simplified" onDelete={() => {}} />
       </div>
       <div>
-        <h2>Land $100K+ a Job</h2>
-        <button>Delete</button>
+        <Todo title="Finish interview section" onDelete={() => {}} />
+      </div>
+      <div>
+        <Todo title="Land $100K+ a Job" onDelete={() => {}} />
       </div>
     </div>
   );
