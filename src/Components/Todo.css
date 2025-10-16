@@ -1,5 +1,5 @@
 .todo {
-    width: 300px;
+    width: calc(100% / 3 - 32px);
     border: 1px solid black;
     padding: 16px;
 } 
