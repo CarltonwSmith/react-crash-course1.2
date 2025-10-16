@@ -11,6 +11,14 @@ function App() {
         <Todo title="Finish interview section" onDelete={() => {}} />
         <Todo title="Land $100K+ a Job" onDelete={() => {}} />
       </div>
+      <Modal />
+    </div>
+  );
+}
+
+export default App;
+
+      </div>
     </div>
   );
 }
