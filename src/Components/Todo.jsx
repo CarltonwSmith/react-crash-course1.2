@@ -1,6 +1,6 @@
 import './Todo.css';
 
-function Todo({ title, onDelete, paragraph }) {
+function Todo({ title, onDelete,}) {
     console.log(title); 
 function handleDelete() {
     onDelete();
@@ -8,11 +8,8 @@ function handleDelete() {
 
   return (
     <div className='todo'>
-        <h2>{title}</h2>
-        <p>{paragraph}</p>  
-        <button onClick={() => onDelete(
-          console.log('Delete clicked')
-        )}>Delete</button>
+        <p>{title}</p>
+        <button onClick={() => onDelete()}>Delete</button>
       </div>
   );
 }
