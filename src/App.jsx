@@ -17,7 +17,7 @@ function App() {
           paragraph = "Apply to 100 jobs."
           />
       </div>
-      <Modal message="Are you sure you want to delete?" />
+      {/*<Modal message="Are you sure you want to delete?" /> */}
     </div>
   );
 }
