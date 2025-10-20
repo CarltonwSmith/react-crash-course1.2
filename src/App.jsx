@@ -3,6 +3,7 @@ import Todo from './Components/Todo';
 import Title from './Components/Title';
 import Modal from './Components/Modal';   
 function App() {
+  let isModalOpen = false;
   return (
     <div>
       <Title />
