@@ -1,23 +1,29 @@
+import { useState } from 'react';
 import './App.css';
 import Todo from './Components/Todo';
 import Title from './Components/Title';
 import Modal from './Components/Modal';   
 function App() {
-  let isModalOpen = false;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function deleteTodo() {
+    setIsModalOpen(true);
+  }
+
   return (
     <div>
       <Title />
       <input type= "text" onChange={(event) => {
         console.log (event.target.value)
       }} />
-      <button>Add Todo</button>
+      <button onClick={() => setIsModalOpen(true)}>Add Todo</button>
       <div className="todo__wrapper">
-        <Todo title="Finish fronted simplified" onDelete={() => {}} />
-        <Todo title="Finish interview section" onDelete={() => {}} />
-        <Todo title="Land $100K+ a Job" onDelete={() => {}} />
-           
+        <Todo title="Finish fronted simplified" onDelete={deleteTodo} />
+        <Todo title="Finish interview section" onDelete={deleteTodo} />
+        <Todo title="Land $100K+ a Job" onDelete={deleteTodo} />
+
       </div>
-      <Modal message="Are you sure you want to delete?" />
+        {isModalOpen && <Modal message="Are you sure you want to delete?" />}
     </div>
   );
 }
